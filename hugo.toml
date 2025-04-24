@@ -1,4 +1,4 @@
-baseURL = 'haifenghou.com'
+baseURL = "https://haifenghou.com/"
 languageCode = 'en-us'
 title = 'My Modern Portfolio'
 # theme = '' 
