@@ -1,7 +1,7 @@
 baseURL = 'haifenghou.com'
 languageCode = 'en-us'
 title = 'My Modern Portfolio'
-theme = '' 
+# theme = '' 
 
 
 [markup.tableOfContents]
