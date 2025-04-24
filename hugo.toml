@@ -1,21 +1,21 @@
-baseURL = 'https://example.org/'
+baseURL = 'haifenghou.com'
 languageCode = 'en-us'
 title = 'My Modern Portfolio'
-theme = '' # 不使用任何主题，直接使用我们自己的布局
+theme = '' 
 
-# 目录配置
+
 [markup.tableOfContents]
-  endLevel = 3 # 生成到 h3 标题
-  ordered = false # 使用无序列表 (ul)
-  startLevel = 2 # 从 h2 标题开始生成
+  endLevel = 3 
+  ordered = false 
+  startLevel = 2 
 
-# 代码高亮配置
+
 [markup.highlight]
-  codeFences = true # 启用代码围栏 (```)
+  codeFences = true 
   guessSyntax = true
-  lineNos = false # 是否显示行号
-  noClasses = false # 必须为 false 才能使用 CSS 主题
-  style = "monokai" # 选择一个内置主题
+  lineNos = false 
+  noClasses = false 
+  style = "monokai"
 
 # 允许在 Markdown 中使用 HTML
 [markup.goldmark.renderer]
