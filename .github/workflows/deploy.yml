@@ -1,0 +1,74 @@
+# .github/workflows/deploy.yml
+
+name: Deploy Hugo site to Pages
+
+on:
+  # 在推送到 main 分支时运行。如果您使用其他默认分支，请更改名称
+  push:
+    branches:
+      - main # 或者您的主分支名，如 master
+  # 允许您在 GitHub Actions 选项卡手动运行此工作流
+  workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 的权限以允许部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许一个并发部署，跳过正在运行和等待中的构建队列
+# 但是，不要取消进行中的运行，因为我们希望允许这些部署完成
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # 构建任务
+  build:
+    runs-on: ubuntu-latest # 使用最新的 Ubuntu 运行器
+    steps:
+      - name: Checkout # 检出您的仓库代码
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # 如果您使用了 Git Submodule (例如某些主题)，请获取它们
+          fetch-depth: 0    # 获取所有历史记录以支持 .Lastmod
+
+      - name: Setup Hugo # 安装 Hugo
+        uses: peaceiris/actions-hugo@v3 # 使用流行的 Hugo 安装 action
+        with:
+          hugo-version: 'latest' # 或者指定一个具体的 Hugo 版本，例如 '0.119.0'
+          # extended: true # 如果您的主题需要 Hugo Extended 版本，取消注释此行
+
+      # --- 如果您使用了需要 Node.js 的功能 (例如 Tailwind CSS via Hugo Pipes) ---
+      - name: Setup Node.js # 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # 或您需要的 Node.js 版本
+          cache: 'npm' # 缓存 npm 依赖项
+
+      - name: Install Node dependencies # 安装 npm 依赖 (如 Tailwind)
+        run: npm install # 如果您使用 yarn, 请改为 yarn install
+
+      # --------------------------------------------------------------------------
+
+      - name: Build Hugo site # 构建 Hugo 网站
+        run: hugo --minify # --minify 是可选的，用于压缩输出文件
+
+      - name: Upload artifact # 上传构建好的网站文件以供部署
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 从 public 目录上传 (Hugo 默认输出目录)
+          path: './public'
+
+  # 部署任务
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # 设置部署环境的 URL
+    runs-on: ubuntu-latest
+    needs: build # 部署任务依赖于构建任务成功完成
+    steps:
+      - name: Deploy to GitHub Pages # 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # 使用官方的部署 action
+        # 此 action 会自动从 'build' 任务上传的 artifact 中获取内容并部署
