@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <rect width="800" height="500" fill="#0a192f" rx="10" ry="10" />
+  
+  <!-- Header/Navigation bar -->
+  <rect x="0" y="0" width="800" height="80" fill="#112240" rx="0" ry="0" />
+  <text x="60" y="50" font-family="Arial" font-size="24" fill="#64ffda">MyPortfolio</text>
+  
+  <!-- Navigation Links -->
+  <text x="500" y="50" font-family="Arial" font-size="16" fill="#ccd6f6">Skills</text>
+  <text x="580" y="50" font-family="Arial" font-size="16" fill="#ccd6f6">Projects</text>
+  <text x="680" y="50" font-family="Arial" font-size="16" fill="#ccd6f6">About</text>
+  
+  <!-- Hero Section -->
+  <text x="400" y="180" font-family="Arial" font-size="48" fill="white" text-anchor="middle">Hi, I'm <tspan fill="#64ffda">Alex</tspan></text>
+  <text x="400" y="240" font-family="Arial" font-size="24" fill="#8892b0" text-anchor="middle">Full Stack Developer</text>
+  <text x="400" y="300" font-family="Arial" font-size="18" fill="#8892b0" text-anchor="middle" width="500">I build exceptional digital experiences for the web.</text>
+  
+  <!-- Social Icons -->
+  <circle cx="350" cy="350" r="20" fill="#112240" />
+  <text x="350" y="358" font-family="Arial" font-size="18" fill="#64ffda" text-anchor="middle">G</text>
+  
+  <circle cx="400" cy="350" r="20" fill="#112240" />
+  <text x="400" y="358" font-family="Arial" font-size="18" fill="#64ffda" text-anchor="middle">L</text>
+  
+  <circle cx="450" cy="350" r="20" fill="#112240" />
+  <text x="450" y="358" font-family="Arial" font-size="18" fill="#64ffda" text-anchor="middle">T</text>
+  
+  <!-- Decoration Elements -->
+  <rect x="100" y="120" width="120" height="10" fill="#64ffda" opacity="0.3" rx="5" ry="5" />
+  <rect x="650" y="200" width="10" height="120" fill="#64ffda" opacity="0.3" rx="5" ry="5" />
+  <rect x="150" y="400" width="80" height="10" fill="#64ffda" opacity="0.3" rx="5" ry="5" />
+  <rect x="600" y="380" width="10" height="80" fill="#64ffda" opacity="0.3" rx="5" ry="5" />
+</svg>

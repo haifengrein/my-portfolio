@@ -1,0 +1,8 @@
+<footer class="bg-[#0a192f]/50 border-t border-slate-700/50 mt-16 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-slate-400 text-sm">
+        © {{ now.Format "2006" }} {{ .Site.Params.Author | default "[Your Name]" }}. All Rights Reserved.
+        {{ with .Site.Params.FooterSourceLink }}
+        <p class="mt-1">Built with <i class="fas fa-heart text-[#64ffda]"></i> and Hugo. <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-[#64ffda] hover:underline">View Source</a>.</p>
+        {{ end }}
+    </div>
+</footer>

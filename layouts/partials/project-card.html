@@ -1,0 +1,35 @@
+<a href="{{ .RelPermalink }}" class="block">
+  <div class="bg-slate-800/30 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden card-hover flex flex-col h-full">
+    <div class="w-full bg-slate-900/50 flex items-center justify-center p-6">
+      <div class="text-center">
+        <i class="text-4xl {{ if eq .Title "Portfolio Website" }}fas fa-laptop-code{{ else if eq .Title "Task Manager App" }}fas fa-tasks{{ else if eq .Title "Weather Dashboard" }}fas fa-cloud-sun{{ else if eq .Title "Weather Dashboard Application" }}fas fa-cloud-rain{{ else }}fas fa-project-diagram{{ end }} text-[#64ffda]"></i>
+        <p class="mt-2 text-sm text-[#ccd6f6]">{{ .Title }}</p>
+      </div>
+    </div>
+    <div class="p-5 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-2 text-[#ccd6f6]">{{ .Title }}</h3>
+      {{ with .Params.description }}
+      <p class="text-[#a8b2d1] mb-3 text-sm line-clamp-3 flex-grow">{{ . }}</p>
+      {{ end }}
+      {{ with .Params.tags }}
+      <div class="flex flex-wrap gap-2 mb-3 mt-auto">
+        {{ range . }}
+        <span class="skill-tag text-xs">{{ . }}</span> 
+        {{ end }}
+      </div>
+      {{ end }}
+      <div class="flex justify-end space-x-4 pt-2">
+        {{ with .Params.sourceUrl }}
+        <span class="text-[#64ffda] hover:text-[#64ffda]/80 transition duration-150 ease-in-out text-sm font-medium" onclick="event.stopPropagation(); window.open('{{ . }}', '_blank'); return false;">
+          <i class="fab fa-github mr-1"></i> Source
+        </span>
+        {{ end }}
+        {{ with .Params.liveUrl }}
+        <span class="text-[#64ffda] hover:text-[#64ffda]/80 transition duration-150 ease-in-out text-sm font-medium" onclick="event.stopPropagation(); window.open('{{ . }}', '_blank'); return false;">
+          <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+        </span>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</a>

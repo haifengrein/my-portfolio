@@ -1,0 +1,83 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My Modern Portfolio'
+theme = '' # 不使用任何主题，直接使用我们自己的布局
+
+# 目录配置
+[markup.tableOfContents]
+  endLevel = 3 # 生成到 h3 标题
+  ordered = false # 使用无序列表 (ul)
+  startLevel = 2 # 从 h2 标题开始生成
+
+# 代码高亮配置
+[markup.highlight]
+  codeFences = true # 启用代码围栏 (```)
+  guessSyntax = true
+  lineNos = false # 是否显示行号
+  noClasses = false # 必须为 false 才能使用 CSS 主题
+  style = "monokai" # 选择一个内置主题
+
+# 允许在 Markdown 中使用 HTML
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  Author = "Your Name"
+  Description = "A personal portfolio showcasing my projects and skills"
+
+  [params.Hero]
+    Name = "Your Name"
+    Bio = "Passionate about building efficient, scalable web applications and constantly exploring cutting-edge technologies. Let's build something amazing together."
+
+  [params.About]
+    PhotoURL = "/images/your-photo.jpg" # 需要添加到 static/images/ 目录
+
+  # 社交链接
+  [[params.Social]]
+    name = "GitHub"
+    icon = "fab fa-github"
+    url = "https://github.com/yourusername"
+  [[params.Social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    url = "https://linkedin.com/in/yourusername"
+  [[params.Social]]
+    name = "Email"
+    icon = "fas fa-envelope"
+    url = "mailto:your.email@example.com"
+
+  # 技能列表
+  [[params.Skills]]
+    name = "JavaScript (ES6+)"
+    icon = "fab fa-js-square"
+  [[params.Skills]]
+    name = "React"
+    icon = "fab fa-react"
+  [[params.Skills]]
+    name = "Node.js"
+    icon = "fab fa-node-js"
+  [[params.Skills]]
+    name = "HTML5"
+    icon = "fab fa-html5"
+  [[params.Skills]]
+    name = "CSS3"
+    icon = "fab fa-css3-alt"
+  [[params.Skills]]
+    name = "Python"
+    icon = "fab fa-python"
+  [[params.Skills]]
+    name = "Git"
+    icon = "fab fa-git-alt"
+  [[params.Skills]]
+    name = "Responsive Design"
+    icon = "fas fa-mobile-alt"
+  [[params.Skills]]
+    name = "RESTful APIs"
+    icon = "fas fa-server"
+
+  # 页脚源码链接 (可选)
+  FooterSourceLink = "https://github.com/yourusername/your-portfolio-repo"
+
+# Hugo Pipes 需要的配置 (如果使用 PostCSS)
+[build]
+  writeStats = true

@@ -1,0 +1,43 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto">
+    <header class="mb-10">
+        <h1 class="text-4xl font-bold mb-4">{{ .Title }}</h1>
+        {{ with .Date }}
+        <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}" class="text-gray-400 text-sm">
+            {{ .Format "January 2, 2006" }}
+        </time>
+        {{ end }}
+    </header>
+
+    <div class="prose prose-lg prose-invert max-w-none">
+        {{ .Content }}
+    </div>
+
+    {{ with .Params.tags }}
+    <div class="mt-10 pt-6 border-t border-gray-700/50">
+        <h3 class="text-lg font-medium mb-2">Tags:</h3>
+        <div class="flex flex-wrap gap-2">
+            {{ range . }}
+            <span class="skill-tag">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+
+    {{ if eq .Section "projects" }}
+    <div class="mt-10 flex justify-between">
+        {{ with .Params.sourceUrl }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/30 hover:bg-blue-600/50 rounded-md transition-colors">
+            <i class="fab fa-github"></i> View Source
+        </a>
+        {{ end }}
+        
+        {{ with .Params.liveUrl }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/30 hover:bg-blue-600/50 rounded-md transition-colors">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+</article>
+{{ end }}

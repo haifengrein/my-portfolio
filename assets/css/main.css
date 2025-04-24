@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add line-clamp utility for text truncation */
+@layer utilities {
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* 自定义样式 */
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        font-family: 'Inter', sans-serif;
+        /* 更新为更柔和的渐变背景 */
+        background: linear-gradient(-45deg, #0a192f, #112240, #0a192f, #172a45);
+        background-size: 400% 400%;
+        animation: subtleGradientBG 15s ease infinite;
+        @apply text-[#ccd6f6] antialiased;
+        scroll-padding-top: 4rem;
+    }
+    
+    /* 紧凑化间距 */
+    h1 {
+        @apply mb-4;
+    }
+    h2, h3, h4, h5, h6 {
+        @apply mb-3;
+    }
+    p {
+        @apply mb-3;
+    }
+}
+
+@layer components {
+    /* 更新渐变文本为更柔和的色调 */
+    .soft-gradient-text,
+    .tech-gradient-text {
+        background: linear-gradient(to right, #64ffda, #7aa2f7);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    /* 统一卡片样式 */
+    .card-hover {
+        @apply transition-all duration-300 ease-in-out border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm;
+    }
+    .card-hover:hover {
+        @apply transform -translate-y-2 border-[#64ffda]/30;
+        box-shadow: 0 8px 20px -5px rgba(100, 255, 218, 0.1);
+    }
+    
+    /* 统一标签样式 */
+    .skill-tag,
+    .info-tag {
+        @apply inline-flex items-center gap-1 bg-slate-700/50 backdrop-blur-sm text-slate-200 px-3 py-1 rounded-full text-xs border border-slate-600/50 transition-all duration-300 ease-in-out;
+    }
+    .skill-tag:hover,
+    .info-tag:hover {
+        @apply bg-slate-700/80 border-[#64ffda]/30;
+    }
+    .skill-tag i,
+    .info-tag i {
+        @apply text-slate-400;
+    }
+    
+    /* 改进的导航链接样式 */
+    .nav-link {
+        @apply relative transition-colors duration-300 ease-in-out;
+    }
+    .nav-link::after {
+        content: '';
+        @apply absolute w-0 h-0.5 bottom-[-4px] left-1/2 transform -translate-x-1/2 bg-[#64ffda] transition-all duration-300 ease-in-out;
+    }
+    .nav-link:hover {
+        @apply text-[#64ffda];
+    }
+    .nav-link:hover::after {
+        @apply w-4/5;
+    }
+    
+    /* 统一的section标题样式 */
+    .section-title {
+        @apply inline-flex items-center gap-2;
+    }
+    .section-title i {
+        @apply text-xl opacity-70;
+    }
+    
+    /* 打字效果光标 */
+    .typing-cursor {
+        @apply inline-block w-1 h-6 ml-1 bg-[#64ffda];
+        animation: blink 1s step-end infinite;
+    }
+    
+    /* 社交图标样式更新 */
+    .social-icon {
+        @apply transition-all duration-300 ease-in-out;
+    }
+    .social-icon:hover {
+        @apply transform scale-125 text-[#64ffda];
+    }
+
+    /* 详情页样式 */
+    .sidebar-card {
+        @apply transition-all duration-300 ease-in-out;
+    }
+    .sidebar-card:hover {
+        @apply border-[#64ffda]/30;
+    }
+    
+    .action-button {
+        @apply border border-[#64ffda] text-[#64ffda] bg-transparent hover:bg-[#64ffda]/10 transition-all duration-300 ease-in-out gap-2;
+    }
+    
+    .sticky-sidebar {
+        @apply sticky top-24;
+    }
+    
+    /* 目录样式 */
+    .toc-custom ul {
+        @apply pl-0 list-none space-y-1 text-sm;
+    }
+    
+    .toc-custom ul ul {
+        @apply pl-4 pt-1 space-y-1;
+    }
+    
+    .toc-custom a {
+        @apply block text-slate-400 hover:text-[#64ffda] transition-colors duration-200 py-1 px-2 rounded-md;
+    }
+    
+    .toc-custom a.active {
+        @apply bg-slate-700/50 text-[#64ffda];
+    }
+    
+    /* 文章内容样式 */
+    .prose-custom {
+        @apply text-[#a8b2d1] leading-relaxed;
+    }
+    
+    .prose-custom h2 {
+        @apply text-2xl font-bold text-[#ccd6f6] mt-8 mb-3 pb-2 border-b border-slate-700/50;
+    }
+    
+    .prose-custom h3 {
+        @apply text-xl font-semibold text-[#ccd6f6] mt-6 mb-3;
+    }
+    
+    .prose-custom p {
+        @apply mb-4;
+    }
+    
+    .prose-custom a {
+        @apply text-[#64ffda] hover:underline;
+    }
+    
+    .prose-custom ul, .prose-custom ol {
+        @apply mb-4 pl-6;
+    }
+    
+    .prose-custom ul {
+        @apply list-disc;
+    }
+    
+    .prose-custom ol {
+        @apply list-decimal;
+    }
+    
+    .prose-custom li {
+        @apply mb-2;
+    }
+    
+    .prose-custom blockquote {
+        @apply border-l-4 border-[#64ffda]/50 pl-4 italic my-6 text-slate-400;
+    }
+    
+    .prose-custom pre {
+        @apply p-4 rounded-md bg-slate-800/80 border border-slate-700/50 overflow-x-auto mb-4 relative;
+    }
+    
+    .prose-custom code {
+        @apply font-mono text-[#7aa2f7];
+    }
+    
+    .prose-custom p code, .prose-custom li code {
+        @apply bg-slate-800/80 px-1.5 py-0.5 rounded text-sm;
+    }
+    
+    .prose-custom img {
+        @apply rounded-md max-w-full mx-auto border border-slate-700/50 my-4;
+    }
+    
+    /* 代码块样式 */
+    .code-block-wrapper {
+        @apply relative;
+    }
+    
+    .copy-code-button {
+        @apply absolute top-2 right-2 p-1.5 text-xs bg-slate-700/80 hover:bg-slate-600 text-slate-300 rounded opacity-80 hover:opacity-100 transition-all duration-200;
+    }
+
+    /* 项目网格优化 */
+    #projects .grid {
+        @apply gap-5;
+    }
+
+    /* 确保当项目数量增加时布局依然合理 */
+    #projects {
+        @apply pb-8 clear-both; /* 确保下方有足够空间 */
+    }
+
+    /* 确保About Me部分不会与Projects重叠 */
+    #about {
+        @apply pt-8 clear-both mt-2; /* 强制换行并在顶部添加空间 */
+    }
+
+    /* 给各section添加明确的边界 */
+    section {
+        @apply relative mb-6;
+    }
+}
+
+/* Keyframes */
+@keyframes subtleGradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

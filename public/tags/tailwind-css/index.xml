@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tailwind CSS on My Modern Portfolio</title>
+    <link>http://localhost:1313/tags/tailwind-css/</link>
+    <description>Recent content in Tailwind CSS on My Modern Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tailwind-css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Portfolio Website</title>
+      <link>http://localhost:1313/projects/project1/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project1/</guid>
+      <description>&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;This portfolio website is designed to showcase my skills and projects in a modern, responsive format. Built with Hugo static site generator and styled with Tailwind CSS, it combines efficiency with visual appeal.&lt;/p&gt;&#xA;&lt;p&gt;The design philosophy focuses on clean aesthetics with subtle tech-inspired elements, creating a professional yet personalized showcase of my work.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;h3 id=&#34;responsive-design&#34;&gt;Responsive Design&lt;/h3&gt;&#xA;&lt;p&gt;The site is fully responsive, providing an optimal viewing experience across all devices from mobile phones to large desktop monitors. This was accomplished using:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

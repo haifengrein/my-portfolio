@@ -1,0 +1,77 @@
+{{ define "main" }}
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+
+        <article class="lg:col-span-3 bg-slate-800/30 backdrop-blur-sm p-6 md:p-8 rounded-lg shadow-lg border border-slate-700/50">
+            <header class="mb-6 pb-5 border-b border-slate-700/50">
+                <h1 class="text-3xl md:text-4xl font-bold mb-3 text-slate-100">{{ .Title }}</h1>
+                <div class="flex items-center text-sm text-slate-400 space-x-4 mb-4">
+                    {{ with .Date }}
+                    <span><i class="far fa-calendar-alt mr-1 opacity-70"></i><time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ .Format "January 2, 2006" }}</time></span>
+                    {{ end }}
+                    <span><i class="far fa-clock mr-1 opacity-70"></i>Est. {{ .ReadingTime }} min read</span>
+                </div>
+                {{ with .Params.image }}
+                <div class="my-6">
+                    <img src="{{ . | relURL }}" alt="{{ $.Title }} Feature Image" class="w-full rounded-md shadow-md border border-slate-600/50" loading="lazy">
+                </div>
+                {{ end }}
+            </header>
+
+            <div class="prose-custom max-w-none">
+                {{ .Content }}
+            </div>
+        </article>
+
+        <aside class="lg:col-span-1">
+            <div class="sticky-sidebar space-y-6">
+                {{ if .TableOfContents }}
+                <div class="sidebar-card bg-slate-800/30 backdrop-blur-sm p-5 rounded-lg shadow-lg border border-slate-700/50">
+                    <h3 class="text-lg font-semibold mb-3 text-slate-200 flex items-center">
+                        <i class="fas fa-list-ul mr-2 text-[#64ffda] text-sm"></i> On this page
+                    </h3>
+                    <nav class="toc-custom" id="toc-nav">
+                        {{ .TableOfContents }}
+                    </nav>
+                </div>
+                {{ end }}
+
+                {{ with .Params.tags }}
+                <div class="sidebar-card bg-slate-800/30 backdrop-blur-sm p-5 rounded-lg shadow-lg border border-slate-700/50">
+                    <h3 class="text-lg font-semibold mb-3 text-slate-200 flex items-center">
+                       <i class="fas fa-tags mr-2 text-[#64ffda] text-sm"></i> Technologies
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        {{ range . }}
+                        <a href="{{ (urlize .) | absURL | printf "/tags/%s/" }}" class="info-tag hover:bg-slate-700/80 transition-colors">
+                            {{ . }}
+                        </a>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+
+                {{ if or .Params.sourceUrl .Params.liveUrl }}
+                <div class="sidebar-card bg-slate-800/30 backdrop-blur-sm p-5 rounded-lg shadow-lg border border-slate-700/50">
+                     <h3 class="text-lg font-semibold mb-3 text-slate-200 flex items-center">
+                       <i class="fas fa-link mr-2 text-[#64ffda] text-sm"></i> Links
+                    </h3>
+                    <div class="flex flex-col space-y-3">
+                         {{ with .Params.sourceUrl }}
+                         <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="action-button text-sm py-2 px-4 rounded-md inline-flex items-center justify-center">
+                            <i class="fab fa-github mr-2"></i> View Source Code
+                        </a>
+                         {{ end }}
+                         {{ with .Params.liveUrl }}
+                        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="action-button text-sm py-2 px-4 rounded-md inline-flex items-center justify-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                        </a>
+                         {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </aside>
+    </div>
+</div>
+{{ end }}

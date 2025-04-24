@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard Application | My Modern Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="/css/main.min.c3f37125c2c42c96de10a717a5a7fb284d5325cc1d11371874e17ecc1cf5e21b.css" integrity="sha256-w/NxJcLELJbeEKcXpaf7KE1TJcwdETcYdOF&#43;zBz14hs=">
+</head>
+<body class="antialiased">
+
+    <nav class="sticky top-0 z-50 shadow-lg bg-[#0a192f] bg-opacity-80 backdrop-blur-md border-b border-slate-300/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <a href="/" class="text-2xl font-bold soft-gradient-text tracking-wider">My Modern Portfolio</a>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-6">
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-[#64ffda] px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-[#64ffda] px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-[#64ffda] px-3 py-2 rounded-md text-sm font-medium">About Me</a>
+                </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+                <button type="button" class="bg-slate-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-[#64ffda] hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-[#64ffda]" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <i class="fas fa-bars block h-6 w-6"></i>
+                    <i class="fas fa-times hidden h-6 w-6"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#skills" class="text-gray-300 hover:bg-slate-700 hover:text-[#64ffda] block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+            <a href="#projects" class="text-gray-300 hover:bg-slate-700 hover:text-[#64ffda] block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="#about" class="text-gray-300 hover:bg-slate-700 hover:text-[#64ffda] block px-3 py-2 rounded-md text-base font-medium">About Me</a>
+        </div>
+    </div>
+</nav>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+
+        <article class="lg:col-span-3 bg-slate-800/30 backdrop-blur-sm p-6 md:p-8 rounded-lg shadow-lg border border-slate-700/50">
+            <header class="mb-6 pb-5 border-b border-slate-700/50">
+                <h1 class="text-3xl md:text-4xl font-bold mb-3 text-slate-100">Weather Dashboard Application</h1>
+                <div class="flex items-center text-sm text-slate-400 space-x-4 mb-4">
+                    
+                    <span><i class="far fa-calendar-alt mr-1 opacity-70"></i><time datetime="2024-02-20T00:00:00Z">February 20, 2024</time></span>
+                    
+                    <span><i class="far fa-clock mr-1 opacity-70"></i>Est. 7 min read</span>
+                </div>
+                
+                <div class="my-6">
+                    <img src="/images/projects/weather-app-screenshot.jpg" alt="Weather Dashboard Application Feature Image" class="w-full rounded-md shadow-md border border-slate-600/50" loading="lazy">
+                </div>
+                
+            </header>
+
+            <div class="prose-custom max-w-none">
+                <h2 id="project-overview">Project Overview</h2>
+<p>The Weather Dashboard is a comprehensive web application that provides users with detailed weather information for any location worldwide. Built with React, this project showcases my ability to create feature-rich applications that integrate multiple data sources and present complex information in an intuitive, user-friendly interface.</p>
+<p><img src="/images/projects/weather-app-main.jpg" alt="Weather Dashboard Main Interface"></p>
+<p>This application combines real-time weather data with interactive visualizations to help users understand current conditions and upcoming forecasts at a glance.</p>
+<h2 id="core-features">Core Features</h2>
+<h3 id="multi-location-weather-tracking">Multi-Location Weather Tracking</h3>
+<p>Users can search for and save multiple locations to track weather conditions across different cities simultaneously:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Location search component with autocomplete
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s1">&#39;axios&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">LocationSearch</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">onLocationSelect</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">query</span><span class="p">,</span> <span class="nx">setQuery</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">results</span><span class="p">,</span> <span class="nx">setResults</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">isLoading</span><span class="p">,</span> <span class="nx">setIsLoading</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">fetchLocations</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">query</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">setResults</span><span class="p">([]);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="sb">`https://api.weatherapi.com/v1/search.json?key=</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_WEATHER_API_KEY</span><span class="si">}</span><span class="sb">&amp;q=</span><span class="si">${</span><span class="nx">query</span><span class="si">}</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">        <span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">setResults</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error fetching locations:&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">timeoutId</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">fetchLocations</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timeoutId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="p">[</span><span class="nx">query</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;location-search&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">input</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">query</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="nx">setQuery</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&#34;Search for a city...&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;search-input&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="nx">isLoading</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;loading-indicator&#34;</span><span class="o">&gt;</span><span class="nx">Searching</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/div&gt;}</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">ul</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;results-list&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="nx">results</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">location</span> <span class="p">=&gt;</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="o">&lt;</span><span class="nx">li</span> 
+</span></span><span class="line"><span class="cl">            <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="sb">`</span><span class="si">${</span><span class="nx">location</span><span class="p">.</span><span class="nx">lat</span><span class="si">}</span><span class="sb">-</span><span class="si">${</span><span class="nx">location</span><span class="p">.</span><span class="nx">lon</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">onLocationSelect</span><span class="p">(</span><span class="nx">location</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;result-item&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span><span class="nx">location</span><span class="p">.</span><span class="nx">name</span><span class="p">},</span> <span class="p">{</span><span class="nx">location</span><span class="p">.</span><span class="nx">region</span><span class="p">},</span> <span class="p">{</span><span class="nx">location</span><span class="p">.</span><span class="nx">country</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">          <span class="o">&lt;</span><span class="err">/li&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">))}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="err">/ul&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">LocationSearch</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="interactive-weather-map">Interactive Weather Map</h3>
+<p>The application includes an interactive map that visualizes temperature, precipitation, and wind patterns:</p>
+<p><img src="/images/projects/weather-app-map.jpg" alt="Weather Interactive Map"></p>
+<p>This feature was implemented using the Leaflet.js library with custom layers for weather data:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Weather map component
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useRef</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">L</span> <span class="nx">from</span> <span class="s1">&#39;leaflet&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="s1">&#39;leaflet/dist/leaflet.css&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">WeatherMap</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">center</span><span class="p">,</span> <span class="nx">zoom</span><span class="p">,</span> <span class="nx">layers</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">mapRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">mapInstanceRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// Initialize map
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">mapRef</span><span class="p">.</span><span class="nx">current</span><span class="p">).</span><span class="nx">setView</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="nx">center</span><span class="p">.</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">center</span><span class="p">.</span><span class="nx">lon</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">        <span class="nx">zoom</span> <span class="o">||</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="c1">// Add base tile layer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; OpenStreetMap contributors&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// Update map center and zoom if changed
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">setView</span><span class="p">([</span><span class="nx">center</span><span class="p">.</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">center</span><span class="p">.</span><span class="nx">lon</span><span class="p">],</span> <span class="nx">zoom</span> <span class="o">||</span> <span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Clear existing layers
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">eachLayer</span><span class="p">(</span><span class="nx">layer</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">layer</span> <span class="k">instanceof</span> <span class="nx">L</span><span class="p">.</span><span class="nx">TileLayer</span> <span class="o">===</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">removeLayer</span><span class="p">(</span><span class="nx">layer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Add selected weather layers
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">layers</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;temperature&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="sb">`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_OPENWEATHER_KEY</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">layers</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;precipitation&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="sb">`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_OPENWEATHER_KEY</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">layers</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;wind&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="sb">`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_OPENWEATHER_KEY</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// Clean up on component unmount
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">mapRef</span><span class="p">.</span><span class="nx">current</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">mapInstanceRef</span><span class="p">.</span><span class="nx">current</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="p">[</span><span class="nx">center</span><span class="p">,</span> <span class="nx">zoom</span><span class="p">,</span> <span class="nx">layers</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">mapRef</span><span class="p">}</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;weather-map&#34;</span> <span class="nx">style</span><span class="o">=</span><span class="p">{{</span> <span class="nx">height</span><span class="o">:</span> <span class="s1">&#39;500px&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;100%&#39;</span> <span class="p">}}</span> <span class="o">/&gt;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">WeatherMap</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="detailed-forecast-visualization">Detailed Forecast Visualization</h3>
+<p>The application provides detailed 7-day forecasts with interactive graphs for temperature, humidity, and wind speed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="c1">// Temperature trend chart component
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Line</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-chartjs-2&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Chart</span><span class="p">,</span> <span class="nx">registerables</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;chart.js&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Chart</span><span class="p">.</span><span class="nx">register</span><span class="p">(...</span><span class="nx">registerables</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">TemperatureChart</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">forecastData</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">dates</span> <span class="o">=</span> <span class="nx">forecastData</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">day</span> <span class="p">=&gt;</span> <span class="nx">day</span><span class="p">.</span><span class="nx">date</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">maxTemps</span> <span class="o">=</span> <span class="nx">forecastData</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">day</span> <span class="p">=&gt;</span> <span class="nx">day</span><span class="p">.</span><span class="nx">maxtemp_c</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">minTemps</span> <span class="o">=</span> <span class="nx">forecastData</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">day</span> <span class="p">=&gt;</span> <span class="nx">day</span><span class="p">.</span><span class="nx">mintemp_c</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">labels</span><span class="o">:</span> <span class="nx">dates</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">datasets</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;Max Temperature (°C)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">:</span> <span class="nx">maxTemps</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">borderColor</span><span class="o">:</span> <span class="s1">&#39;rgba(255, 99, 132, 1)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">backgroundColor</span><span class="o">:</span> <span class="s1">&#39;rgba(255, 99, 132, 0.2)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fill</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tension</span><span class="o">:</span> <span class="mf">0.4</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;Min Temperature (°C)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">:</span> <span class="nx">minTemps</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">borderColor</span><span class="o">:</span> <span class="s1">&#39;rgba(54, 162, 235, 1)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">backgroundColor</span><span class="o">:</span> <span class="s1">&#39;rgba(54, 162, 235, 0.2)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fill</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tension</span><span class="o">:</span> <span class="mf">0.4</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">responsive</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">plugins</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">legend</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">position</span><span class="o">:</span> <span class="s1">&#39;top&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">tooltip</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">mode</span><span class="o">:</span> <span class="s1">&#39;index&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">intersect</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">scales</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">y</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">display</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Temperature (°C)&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">x</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">display</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Date&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;chart-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="nx">Temperature</span> <span class="nx">Forecast</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">Line</span> <span class="na">data</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="na">options</span><span class="o">=</span><span class="p">{</span><span class="nx">options</span><span class="p">}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">TemperatureChart</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="technical-architecture">Technical Architecture</h2>
+<h3 id="frontend-architecture">Frontend Architecture</h3>
+<p>The application follows a component-based architecture using React hooks and context API for state management:</p>
+<p><img src="/images/projects/weather-app-architecture.jpg" alt="Weather App Architecture"></p>
+<h3 id="key-technologies">Key Technologies</h3>
+<p>This project leverages several modern web technologies:</p>
+<ul>
+<li><strong>React</strong>: For the UI component system and state management</li>
+<li><strong>APIs</strong>: Integration with OpenWeatherMap API and WeatherAPI</li>
+<li><strong>Chart.js</strong>: For data visualization components</li>
+<li><strong>Leaflet.js</strong>: For interactive mapping</li>
+<li><strong>Axios</strong>: For API requests with interceptors for error handling</li>
+<li><strong>CSS Modules</strong>: For component-scoped styling</li>
+<li><strong>LocalStorage</strong>: For persisting user preferences</li>
+</ul>
+<h2 id="api-integration">API Integration</h2>
+<p>The application uses a custom hook to handle API requests efficiently:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Custom API hook with caching
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s1">&#39;axios&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">useWeatherApi</span> <span class="o">=</span> <span class="p">(</span><span class="nx">location</span><span class="p">,</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">cacheTime</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">options</span><span class="p">;</span> <span class="c1">// Default 30 mins cache
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="p">[</span><span class="nx">data</span><span class="p">,</span> <span class="nx">setData</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">isLoading</span><span class="p">,</span> <span class="nx">setIsLoading</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">error</span><span class="p">,</span> <span class="nx">setError</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">fetchData</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">location</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">setData</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setError</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="c1">// Check for cached data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">cacheKey</span> <span class="o">=</span> <span class="sb">`weather_data_</span><span class="si">${</span><span class="nx">location</span><span class="p">.</span><span class="nx">lat</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">location</span><span class="p">.</span><span class="nx">lon</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">cachedData</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">cacheKey</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">cachedData</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="p">{</span> <span class="nx">data</span><span class="o">:</span> <span class="nx">parsedData</span><span class="p">,</span> <span class="nx">timestamp</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">cachedData</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// Use cached data if it&#39;s still valid
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">-</span> <span class="nx">timestamp</span> <span class="o">&lt;</span> <span class="nx">cacheTime</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">setData</span><span class="p">(</span><span class="nx">parsedData</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="c1">// Fetch fresh data if no valid cache exists
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="sb">`https://api.weatherapi.com/v1/forecast.json?key=</span><span class="si">${</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REACT_APP_WEATHER_API_KEY</span><span class="si">}</span><span class="sb">&amp;q=</span><span class="si">${</span><span class="nx">location</span><span class="p">.</span><span class="nx">lat</span><span class="si">}</span><span class="sb">,</span><span class="si">${</span><span class="nx">location</span><span class="p">.</span><span class="nx">lon</span><span class="si">}</span><span class="sb">&amp;days=7&amp;aqi=yes&amp;alerts=yes`</span>
+</span></span><span class="line"><span class="cl">        <span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// Cache the new data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">cacheKey</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">data</span><span class="o">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">timestamp</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}));</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="nx">setData</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">setError</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">response</span><span class="o">?</span><span class="p">.</span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">error</span> <span class="o">||</span> <span class="s1">&#39;Failed to fetch weather data&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Weather API error:&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">setIsLoading</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nx">fetchData</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="p">[</span><span class="nx">location</span><span class="p">,</span> <span class="nx">cacheTime</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">{</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">isLoading</span><span class="p">,</span> <span class="nx">error</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">useWeatherApi</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="responsive-design-implementation">Responsive Design Implementation</h2>
+<p>The application adapts seamlessly to different screen sizes through carefully crafted CSS:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* Responsive design using CSS variables and media queries */</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--spacing-xs</span><span class="p">:</span> <span class="mf">0.25</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--spacing-sm</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--spacing-md</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--spacing-lg</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--spacing-xl</span><span class="p">:</span> <span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nv">--font-size-xs</span><span class="p">:</span> <span class="mf">0.75</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--font-size-sm</span><span class="p">:</span> <span class="mf">0.875</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--font-size-md</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--font-size-lg</span><span class="p">:</span> <span class="mf">1.25</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--font-size-xl</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--font-size-xxl</span><span class="p">:</span> <span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nv">--border-radius-sm</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--border-radius-md</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--border-radius-lg</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nv">--container-width</span><span class="p">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">weather-dashboard</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">max-width</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">container</span><span class="o">-</span><span class="n">width</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">padding</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">spacing</span><span class="o">-</span><span class="n">md</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">weather-card</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">backdrop-filter</span><span class="p">:</span> <span class="nb">blur</span><span class="p">(</span><span class="mi">10</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border-radius</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="o">-</span><span class="n">md</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">padding</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">spacing</span><span class="o">-</span><span class="n">lg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-bottom</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">spacing</span><span class="o">-</span><span class="n">lg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transition</span><span class="p">:</span> <span class="k">transform</span> <span class="mf">0.3</span><span class="kt">s</span> <span class="kc">ease</span><span class="p">,</span> <span class="k">box-shadow</span> <span class="mf">0.3</span><span class="kt">s</span> <span class="kc">ease</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">weather-card</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">transform</span><span class="p">:</span> <span class="nb">translateY</span><span class="p">(</span><span class="mi">-5</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">forecast-grid</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">gap</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">spacing</span><span class="o">-</span><span class="n">md</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">1024px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">forecast-grid</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">forecast-grid</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">weather-map</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">300</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">480px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">forecast-grid</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--spacing-lg</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--font-size-xl</span><span class="p">:</span> <span class="mf">1.25</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--font-size-xxl</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">weather-dashboard</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">spacing</span><span class="o">-</span><span class="n">sm</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="performance-optimization">Performance Optimization</h2>
+<p>Several techniques were implemented to ensure optimal performance:</p>
+<ol>
+<li><strong>API Data Caching</strong>: Weather data is cached in localStorage to reduce API calls</li>
+<li><strong>Code Splitting</strong>: Using React&rsquo;s lazy loading to split bundles</li>
+<li><strong>Debounced Search</strong>: Reduced API calls during location search</li>
+<li><strong>Optimized Renders</strong>: Using React.memo and useMemo for expensive calculations</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Code splitting example
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">lazy</span><span class="p">,</span> <span class="nx">Suspense</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Lazy loaded components
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">WeatherMap</span> <span class="o">=</span> <span class="nx">lazy</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s1">&#39;./components/WeatherMap&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">ForecastDetails</span> <span class="o">=</span> <span class="nx">lazy</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s1">&#39;./components/ForecastDetails&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">WeatherAlerts</span> <span class="o">=</span> <span class="nx">lazy</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s1">&#39;./components/WeatherAlerts&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">WeatherDashboard</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">location</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;weather-dashboard&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="cm">/* Main weather display always loaded */</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">CurrentWeather</span> <span class="nx">location</span><span class="o">=</span><span class="p">{</span><span class="nx">location</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="p">{</span><span class="cm">/* Lazily loaded components */</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">Suspense</span> <span class="nx">fallback</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;loading-skeleton&#34;</span><span class="o">&gt;</span><span class="nx">Loading</span> <span class="nx">map</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/div&gt;}&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">WeatherMap</span> <span class="nx">center</span><span class="o">=</span><span class="p">{</span><span class="nx">location</span><span class="p">}</span> <span class="nx">layers</span><span class="o">=</span><span class="p">{[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]}</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="err">/Suspense&gt;</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">Suspense</span> <span class="nx">fallback</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;loading-skeleton&#34;</span><span class="o">&gt;</span><span class="nx">Loading</span> <span class="nx">forecast</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/div&gt;}&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">ForecastDetails</span> <span class="nx">location</span><span class="o">=</span><span class="p">{</span><span class="nx">location</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="err">/Suspense&gt;</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">Suspense</span> <span class="nx">fallback</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;loading-skeleton&#34;</span><span class="o">&gt;</span><span class="nx">Loading</span> <span class="nx">alerts</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/div&gt;}&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">WeatherAlerts</span> <span class="nx">location</span><span class="o">=</span><span class="p">{</span><span class="nx">location</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="err">/Suspense&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h2 id="user-experience-considerations">User Experience Considerations</h2>
+<p>Special attention was paid to user experience details:</p>
+<ol>
+<li><strong>Loading States</strong>: Skeleton screens during data fetching</li>
+<li><strong>Error Handling</strong>: User-friendly error messages with recovery options</li>
+<li><strong>Offline Support</strong>: Basic functionality when offline using cached data</li>
+<li><strong>Accessibility</strong>: ARIA attributes and keyboard navigation support</li>
+</ol>
+<h2 id="testing-strategy">Testing Strategy</h2>
+<p>The application was thoroughly tested using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Jest unit test example for temperature conversion utility
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">convertTemperature</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../utils/temperatureUtils&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Temperature Conversion Utility&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;converts celsius to fahrenheit correctly&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">convertTemperature</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">32</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">convertTemperature</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">212</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">convertTemperature</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;converts fahrenheit to celsius correctly&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">convertTemperature</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">convertTemperature</span><span class="p">(</span><span class="mi">212</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">convertTemperature</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;returns original value when same unit is specified&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">convertTemperature</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">convertTemperature</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">70</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;handles decimal values&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">convertTemperature</span><span class="p">(</span><span class="mf">37.5</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)).</span><span class="nx">toBeCloseTo</span><span class="p">(</span><span class="mf">99.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">convertTemperature</span><span class="p">(</span><span class="mf">98.6</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)).</span><span class="nx">toBeCloseTo</span><span class="p">(</span><span class="mf">37.0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;throws error for invalid units&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">convertTemperature</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)).</span><span class="nx">toThrow</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">convertTemperature</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">)).</span><span class="nx">toThrow</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><h2 id="lessons-learned">Lessons Learned</h2>
+<p>This project provided valuable insights into:</p>
+<ol>
+<li><strong>API Integration Challenges</strong>: Handling rate limits and data inconsistencies</li>
+<li><strong>State Management Complexity</strong>: Balancing local vs. global state</li>
+<li><strong>Performance Optimization</strong>: Identifying and resolving bottlenecks</li>
+<li><strong>Cross-Browser Compatibility</strong>: Addressing differences in geolocation API support</li>
+</ol>
+<h2 id="future-improvements">Future Improvements</h2>
+<p>The application has potential for several enhancements:</p>
+<ol>
+<li>Adding support for weather alerts and notifications</li>
+<li>Implementing PWA features for better offline experience</li>
+<li>Adding historical weather data charts</li>
+<li>Integrating more detailed radar maps</li>
+<li>Supporting user accounts to sync preferences across devices</li>
+</ol>
+<p>This weather dashboard project demonstrates my ability to create complex, data-driven applications with polished user interfaces and thoughtful architecture decisions.</p>
+
+            </div>
+        </article>
+
+        <aside class="lg:col-span-1">
+            <div class="sticky-sidebar space-y-6">
+                
+                <div class="sidebar-card bg-slate-800/30 backdrop-blur-sm p-5 rounded-lg shadow-lg border border-slate-700/50">
+                    <h3 class="text-lg font-semibold mb-3 text-slate-200 flex items-center">
+                        <i class="fas fa-list-ul mr-2 text-[#64ffda] text-sm"></i> On this page
+                    </h3>
+                    <nav class="toc-custom" id="toc-nav">
+                        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#project-overview">Project Overview</a></li>
+    <li><a href="#core-features">Core Features</a>
+      <ul>
+        <li><a href="#multi-location-weather-tracking">Multi-Location Weather Tracking</a></li>
+        <li><a href="#interactive-weather-map">Interactive Weather Map</a></li>
+        <li><a href="#detailed-forecast-visualization">Detailed Forecast Visualization</a></li>
+      </ul>
+    </li>
+    <li><a href="#technical-architecture">Technical Architecture</a>
+      <ul>
+        <li><a href="#frontend-architecture">Frontend Architecture</a></li>
+        <li><a href="#key-technologies">Key Technologies</a></li>
+      </ul>
+    </li>
+    <li><a href="#api-integration">API Integration</a></li>
+    <li><a href="#responsive-design-implementation">Responsive Design Implementation</a></li>
+    <li><a href="#performance-optimization">Performance Optimization</a></li>
+    <li><a href="#user-experience-considerations">User Experience Considerations</a></li>
+    <li><a href="#testing-strategy">Testing Strategy</a></li>
+    <li><a href="#lessons-learned">Lessons Learned</a></li>
+    <li><a href="#future-improvements">Future Improvements</a></li>
+  </ul>
+</nav>
+                    </nav>
+                </div>
+                
+
+                
+                <div class="sidebar-card bg-slate-800/30 backdrop-blur-sm p-5 rounded-lg shadow-lg border border-slate-700/50">
+                    <h3 class="text-lg font-semibold mb-3 text-slate-200 flex items-center">
+                       <i class="fas fa-tags mr-2 text-[#64ffda] text-sm"></i> Technologies
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        
+                        <a href="/tags/http://localhost:1313/react/" class="info-tag hover:bg-slate-700/80 transition-colors">
+                            React
+                        </a>
+                        
+                        <a href="/tags/http://localhost:1313/api-integration/" class="info-tag hover:bg-slate-700/80 transition-colors">
+                            API Integration
+                        </a>
+                        
+                        <a href="/tags/http://localhost:1313/javascript/" class="info-tag hover:bg-slate-700/80 transition-colors">
+                            JavaScript
+                        </a>
+                        
+                        <a href="/tags/http://localhost:1313/css3/" class="info-tag hover:bg-slate-700/80 transition-colors">
+                            CSS3
+                        </a>
+                        
+                        <a href="/tags/http://localhost:1313/responsive-design/" class="info-tag hover:bg-slate-700/80 transition-colors">
+                            Responsive Design
+                        </a>
+                        
+                    </div>
+                </div>
+                
+
+                
+                <div class="sidebar-card bg-slate-800/30 backdrop-blur-sm p-5 rounded-lg shadow-lg border border-slate-700/50">
+                     <h3 class="text-lg font-semibold mb-3 text-slate-200 flex items-center">
+                       <i class="fas fa-link mr-2 text-[#64ffda] text-sm"></i> Links
+                    </h3>
+                    <div class="flex flex-col space-y-3">
+                         
+                         <a href="https://github.com/yourusername/weather-dashboard" target="_blank" rel="noopener noreferrer" class="action-button text-sm py-2 px-4 rounded-md inline-flex items-center justify-center">
+                            <i class="fab fa-github mr-2"></i> View Source Code
+                        </a>
+                         
+                         
+                        <a href="https://weather-app-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="action-button text-sm py-2 px-4 rounded-md inline-flex items-center justify-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                        </a>
+                         
+                    </div>
+                </div>
+                
+            </div>
+        </aside>
+    </div>
+</div>
+
+    </main>
+
+    <footer class="bg-[#0a192f]/50 border-t border-slate-700/50 mt-16 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-slate-400 text-sm">
+        © 2025 Your Name. All Rights Reserved.
+        
+    </div>
+</footer>
+
+    
+    
+    <script src="/js/main.min.025c5a9145c0508b905ad398165a30d7e50b2e66cb1a1b4d00706b571a436117.js" integrity="sha256-AlxakUXAUIuQWtOYFlow1&#43;ULLmbLGhtNAHBrVxpDYRc=" defer></script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldQ6nFOhdhQANSLWUI0/wRYlHhr++RxYVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
